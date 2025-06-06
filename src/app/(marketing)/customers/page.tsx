@@ -8,7 +8,7 @@ const testimonials = [
     role: "Senior Developer",
     company: "TechCorp",
     image: "/avatars/sarah.jpg",
-    content: "Neurolint has transformed our code review process. The AI suggestions are spot-on and have helped us catch issues before they reach production.",
+    content: "neurolint has transformed our code review process. The AI suggestions are spot-on and have helped us catch issues before they reach production.",
     rating: 5
   },
   {
@@ -24,7 +24,7 @@ const testimonials = [
     role: "Lead Developer",
     company: "DevCo",
     image: "/avatars/emily.jpg",
-    content: "As a team lead, I appreciate how Neurolint helps maintain code quality across our projects. The performance suggestions have been particularly helpful.",
+    content: "As a team lead, I appreciate how neurolint helps maintain code quality across our projects. The performance suggestions have been particularly helpful.",
     rating: 5
   }
 ];
@@ -33,19 +33,19 @@ const caseStudies = [
   {
     title: "Reducing Bug Reports by 40%",
     company: "TechCorp",
-    description: "How TechCorp improved code quality and reduced production issues using Neurolint's AI-powered analysis.",
+    description: "How TechCorp improved code quality and reduced production issues using neurolint's AI-powered analysis.",
     image: "/case-studies/techcorp.jpg"
   },
   {
     title: "Accelerating Development Speed",
     company: "StartupX",
-    description: "StartupX's journey to faster development cycles and better code quality with Neurolint.",
+    description: "StartupX's journey to faster development cycles and better code quality with neurolint.",
     image: "/case-studies/startupx.jpg"
   },
   {
     title: "Enhancing Security Posture",
     company: "DevCo",
-    description: "How DevCo strengthened their security practices using Neurolint's vulnerability detection.",
+    description: "How DevCo strengthened their security practices using neurolint's vulnerability detection.",
     image: "/case-studies/devco.jpg"
   }
 ];
@@ -61,7 +61,7 @@ export default function CustomersPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Trusted by Developers Worldwide</h1>
             <p className="text-xl sm:text-2xl text-muted-foreground mb-8 sm:mb-10">
-              See how teams are using Neurolint to improve their code quality
+              See how teams are using neurolint to improve their code quality
             </p>
           </div>
         </div>
@@ -128,7 +128,7 @@ export default function CustomersPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">Join Our Growing Community</h2>
             <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8">
-              Start improving your code quality today with Neurolint
+              Start improving your code quality today with neurolint
             </p>
             <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
               Get Started

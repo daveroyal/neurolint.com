@@ -60,7 +60,7 @@ export function Navigation() {
               <div className="flex items-center">
                 <Image
                   src="/neurolint-logo--dark.png"
-                  alt="Neurolint Logo"
+                  alt="neurolint logo"
                   width="0"
                   height="0"
                   sizes="100vw"
@@ -69,7 +69,7 @@ export function Navigation() {
                 />
                 <Image
                   src="/neurolint-logo--white.png"
-                  alt="Neurolint Logo"
+                  alt="neurolint logo"
                   width="0"
                   height="0"
                   sizes="100vw"

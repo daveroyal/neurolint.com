@@ -26,7 +26,7 @@ export function CodeEditor({
   readOnly = false,
   className,
 }: CodeEditorProps) {
-  const { theme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
   const handleEditorDidMount: OnMount = (editor, monaco) => {
     // Set up cursor position tracking
@@ -38,10 +38,8 @@ export function CodeEditor({
       })
     })
 
-    // Set theme
-    if (theme === 'dark') {
-      monaco.editor.setTheme('custom-dark')
-    }
+    // Set theme based on resolved theme
+    monaco.editor.setTheme(resolvedTheme === 'light' ? 'vs' : 'custom-dark')
   }
 
   return (
@@ -86,7 +84,7 @@ export function CodeEditor({
         renderLineHighlightOnlyWhenFocus: false,
         lineHeight: 20,
       }}
-      theme={theme === 'dark' ? 'vs-dark' : 'light'}
+      theme={resolvedTheme === 'light' ? 'vs' : 'vs-dark'}
       beforeMount={(monaco) => {
         monaco.editor.defineTheme('custom-dark', {
           base: 'vs-dark',
@@ -94,6 +92,23 @@ export function CodeEditor({
           rules: [],
           colors: {
             'editor.background': '#1A1A1A',
+            'editor.foreground': '#D4D4D4',
+            'editor.lineHighlightBackground': '#2A2A2A',
+            'editor.selectionBackground': '#264F78',
+            'editor.inactiveSelectionBackground': '#3A3D41',
+            'editorIndentGuide.background': '#404040',
+            'editorIndentGuide.activeBackground': '#707070',
+            'editor.lineHighlightBorder': '#2A2A2A',
+            'editorCursor.foreground': '#D4D4D4',
+            'editorWhitespace.foreground': '#404040',
+            'editorLineNumber.foreground': '#858585',
+            'editorLineNumber.activeForeground': '#C6C6C6',
+            'editorGutter.background': '#1A1A1A',
+            'editorError.foreground': '#F48771',
+            'editorWarning.foreground': '#CCA700',
+            'editorInfo.foreground': '#75BEFF',
+            'editorBracketMatch.background': '#0050A4',
+            'editorBracketMatch.border': '#007ACC',
           }
         })
       }}

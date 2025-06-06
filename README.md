@@ -1,6 +1,8 @@
-# Neurolint - AI Code Review Assistant
+# neurolint - AI Code Review Assistant
 
-![Neurolint OG Image](./public/neurolint-og.png)
+![neurolint OG Image](./public/neurolint-og.png)
+
+Visit us at [neurolint.com](https://neurolint.com)
 
 A modern Next.js app for intelligent code analysis using AI providers like OpenAI, Anthropic, and local models.
 

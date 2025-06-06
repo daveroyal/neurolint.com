@@ -75,7 +75,7 @@ export default function BlogPage() {
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Neurolint Blog</h1>
+            <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">neurolint blog</h1>
             <p className="text-xl sm:text-2xl text-muted-foreground mb-8 sm:mb-10">
               Insights, tutorials, and best practices for modern development
             </p>

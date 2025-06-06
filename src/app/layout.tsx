@@ -10,24 +10,32 @@ import { Toaster } from 'sonner'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Neurolint - AI Code Review Assistant",
-  description: "AI-powered code review assistant for developers.",
+  title: "neurolint - AI Code Review Assistant",
+  description: "AI-powered code analysis and review assistant",
   metadataBase: new URL('https://neurolint.com'),
   appleWebApp: {
     title: "Neurolint",
   },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://neurolint.com',
+    title: "neurolint",
+    description: "AI-powered code analysis and review assistant",
+    siteName: "neurolint",
     images: [
       {
         url: '/neurolint-og.png',
         width: 1200,
         height: 630,
-        alt: 'Neurolint - AI Code Review Assistant',
+        alt: 'neurolint - AI Code Review Assistant',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
+    title: "neurolint - AI Code Review Assistant",
+    description: "AI-powered code analysis and review assistant",
     images: ['/neurolint-og.png'],
   },
 };

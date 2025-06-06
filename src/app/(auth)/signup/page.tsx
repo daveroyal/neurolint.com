@@ -85,7 +85,7 @@ export default function SignUpPage() {
             <div className="text-center mb-8">
               <h1 className="text-4xl font-bold tracking-tight mb-2">Create an account</h1>
               <p className="text-lg text-muted-foreground">
-                Sign up to start using Neurolint
+                Sign up to start using neurolint
               </p>
             </div>
             <Card className="border-border/40 bg-card/90 dark:bg-card/60 backdrop-blur-sm">

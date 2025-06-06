@@ -6,7 +6,7 @@ const tiers = [
   {
     name: 'Free',
     price: '$0',
-    description: 'Perfect for trying out Neurolint',
+    description: 'Perfect for trying out neurolint',
     features: [
       'Up to 10 code analyses per month',
       'Basic security checks',

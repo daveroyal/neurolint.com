@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Code2, Settings, History, BarChart3 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: 'Documentation | Neurolint',
-  description: 'Learn how to use Neurolint to improve your code quality and maintainability.',
+  title: 'Documentation | neurolint',
+  description: 'Learn how to use neurolint to improve your code quality and maintainability.',
 }
 
 export default function DocsPage() {
@@ -18,7 +18,7 @@ export default function DocsPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">Documentation</h1>
             <p className="text-xl sm:text-2xl text-muted-foreground mb-8 sm:mb-10">
-              Learn how to use Neurolint&apos;s features and get the most out of your code analysis
+              Learn how to use neurolint&apos;s features and get the most out of your code analysis
             </p>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function DocsPage() {
                 <h3 className="text-xl font-semibold mb-4">API Configuration</h3>
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
-                    To use Neurolint&apos;s AI-powered analysis, you need to configure your API keys:
+                    To use neurolint&apos;s AI-powered analysis, you need to configure your API keys:
                   </p>
                   <ol className="list-decimal list-inside text-muted-foreground ml-4">
                     <li>Go to Settings in the dashboard</li>
@@ -184,7 +184,7 @@ export default function DocsPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">Need More Help?</h2>
             <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8">
-              Check out our detailed guides and examples to get the most out of Neurolint.
+              Check out our detailed guides and examples to get the most out of neurolint.
             </p>
             <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
               View All Guides

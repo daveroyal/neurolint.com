@@ -77,14 +77,14 @@ export function Footer() {
             <div className="flex justify-center mb-4">
               <Image
                 src="/neurolint-logo--dark.png"
-                alt="Neurolint"
+                alt="neurolint"
                 width={150}
                 height={24}
                 className="h-6 w-auto block dark:hidden"
               />
               <Image
                 src="/neurolint-logo--white.png"
-                alt="Neurolint"
+                alt="neurolint"
                 width="0"
                 height="0"
                 sizes="100vw"
@@ -92,7 +92,7 @@ export function Footer() {
               />
             </div>
             <div className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Neurolint. All rights reserved.
+              © {new Date().getFullYear()} neurolint. All rights reserved.
             </div>
           </div>
         </div>

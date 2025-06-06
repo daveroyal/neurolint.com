@@ -7,7 +7,7 @@ import { Star } from "lucide-react"
 export function Testimonials() {
   const testimonials = [
     {
-      quote: "Neurolint has transformed our code review process. The AI insights are incredibly accurate and save us hours of manual review.",
+      quote: "neurolint has transformed our code review process. The AI insights are incredibly accurate and save us hours of manual review.",
       author: "Sarah Chen",
       role: "Lead Developer at TechCorp",
       rating: 5
@@ -40,7 +40,7 @@ export function Testimonials() {
             Loved by Developers
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            See what our users have to say about their experience with Neurolint
+            See what our users have to say about their experience with neurolint
           </p>
         </motion.div>
 

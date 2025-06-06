@@ -58,7 +58,7 @@ export default function ProductPage() {
             <Sparkles className="h-12 w-12 text-primary mx-auto mb-4" />
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ready to improve your code quality?</h2>
             <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8">
-              Join thousands of developers who trust Neurolint for their code reviews.
+              Join thousands of developers who trust neurolint for their code reviews.
             </p>
             <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
               Start Free Trial

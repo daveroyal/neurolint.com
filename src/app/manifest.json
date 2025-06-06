@@ -1,6 +1,6 @@
 {
-  "name": "Neurolint",
-  "short_name": "Neurolint",
+  "name": "neurolint",
+  "short_name": "neurolint",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
