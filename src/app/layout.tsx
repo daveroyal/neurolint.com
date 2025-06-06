@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { cn } from "@/lib/utils";
 import { Toaster } from 'sonner'
+import { BannerAndNavWrapper } from "@/components/layout/BannerAndNavWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,17 +47,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('min-h-screen bg-background font-sans antialiased', inter.className)}>
+      <head>
+        <style>{`
+          :root {
+            --nav-height: 64px;
+          }
+        `}</style>
+      </head>
+      <body className={cn(
+        "min-h-screen bg-background font-sans antialiased flex flex-col",
+        inter.className
+      )}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <Navigation />
-          <main>
-            {children}
-          </main>
+          <BannerAndNavWrapper>
+            <main className="flex-1 flex flex-col">
+              {children}
+            </main>
+          </BannerAndNavWrapper>
           <div className="w-full">
             <Footer />
           </div>

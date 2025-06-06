@@ -54,7 +54,7 @@ export default function CustomersPage() {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden w-full bg-[#3B82F6]/5">
+      <section className="relative pt-38 pb-24 overflow-hidden w-full bg-[#3B82F6]/5">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-purple-500/20 to-background" />
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative">

@@ -62,9 +62,10 @@ export default function InstallationPage() {
               <div className="bg-muted p-4 rounded-lg">
                 <pre className="text-sm">
                   <code>{`// neurolint.config.js
-module.exports = {
-  // Your configuration options
-}`}</code>
+                    module.exports = {
+                      // Your configuration options
+                    }`}
+                  </code>
                 </pre>
               </div>
             </div>
@@ -85,12 +86,13 @@ module.exports = {
               <div className="bg-muted p-4 rounded-lg">
                 <pre className="text-sm">
                   <code>{`// neurolint.config.js
-module.exports = {
-  apiKeys: {
-    openai: 'your-openai-api-key',
-    anthropic: 'your-anthropic-api-key'
-  }
-}`}</code>
+                    module.exports = {
+                      apiKeys: {
+                        openai: 'your-openai-api-key',
+                        anthropic: 'your-anthropic-api-key'
+                      }
+                    }`}
+                  </code>
                 </pre>
               </div>
             </div>
@@ -111,14 +113,15 @@ module.exports = {
               <div className="bg-muted p-4 rounded-lg">
                 <pre className="text-sm">
                   <code>{`// Run neurolint
-npx neurolint
+                    npx neurolint
 
-// Or add it to your package.json scripts
-{
-  "scripts": {
-    "lint": "neurolint"
-  }
-}`}</code>
+                    // Or add it to your package.json scripts
+                    {
+                      "scripts": {
+                        "lint": "neurolint"
+                      }
+                    }`}
+                  </code>
                 </pre>
               </div>
             </div>
