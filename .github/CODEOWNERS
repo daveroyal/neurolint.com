@@ -1,0 +1,15 @@
+# These owners will be the default owners for everything in the repo.
+# Unless a later match takes precedence, they will be requested for review when someone opens a pull request.
+* @yourusername
+
+# These owners will be the default owners for everything in the src/ directory.
+# The src/ directory will match everything in the src/ directory.
+/src/ @yourusername
+
+# These owners will be the default owners for everything in the docs/ directory.
+# The docs/ directory will match everything in the docs/ directory.
+/docs/ @yourusername
+
+# These owners will be the default owners for everything in the .github/ directory.
+# The .github/ directory will match everything in the .github/ directory.
+/.github/ @yourusername 

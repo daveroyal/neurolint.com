@@ -1,0 +1,84 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install Dependencies
+      run: npm ci
+      
+    - name: Security Audit
+      run: npm audit
+      
+    - name: Build
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      run: npm run build
+      
+    - name: Prepare Production Files
+      run: |
+        rm -rf .git
+        rm -rf node_modules
+        rm -rf .next/cache
+        
+    - name: Deploy to Debian Server
+      uses: appleboy/ssh-action@master
+      with:
+        host: 66.135.14.220
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          # Create directory if it doesn't exist
+          mkdir -p /var/www/neurolint
+          
+    - name: Copy files to server
+      uses: appleboy/scp-action@master
+      with:
+        host: 66.135.14.220
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        source: "."
+        target: "/var/www/neurolint"
+        strip_components: 0
+        
+    - name: Setup and Start Application
+      uses: appleboy/ssh-action@master
+      with:
+        host: 66.135.14.220
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd /var/www/neurolint
+          
+          # Install production dependencies only
+          npm ci --production
+          
+          # Set environment variables
+          export NEXT_PUBLIC_SUPABASE_URL=${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          export NEXT_PUBLIC_SUPABASE_ANON_KEY=${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          export SUPABASE_SERVICE_ROLE_KEY=${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          
+          # Start the application with PM2
+          pm2 delete neurolint || true
+          pm2 start npm --name "neurolint" -- start
+          
+          # Save PM2 configuration
+          pm2 save
+          
+          # Setup PM2 to start on system boot 
